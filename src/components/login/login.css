@@ -1,0 +1,32 @@
+.login{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    background-image: url("../../images/background.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form_login{
+    -webkit-box-shadow: 0px 0px 30px -15px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 30px -15px rgba(0,0,0,1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,1);
+    background: white;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+.title_login{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+.btn-login{
+    text-align: center;
+}
+.forgot-password{
+    text-align: right;
+}

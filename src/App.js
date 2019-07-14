@@ -1,24 +1,36 @@
-import React from 'react';
-// import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import routes from './router';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-function App() {
-  return (
-    <div>
-      <div class="btn-group">
-        <button type="button" class="btn btn-secondary">Split dropdown</button>
-        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item disabled" href="#">Disabled action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
+class App extends Component {
+  render() {
+    return(
+      <Router>
+        <div className="App">
+          <Switch>
+            { this.showContents(routes)}
+          </Switch>
         </div>
-      </div>
-    </div>
-  );
+      </Router>
+    );
+  }
+  showContents = (routes) => {
+    var result = null;
+    if(routes.length > 0){
+      result = routes.map((route, index) => {
+        return(
+          <Route 
+            key = {index}
+            path = {route.path}
+            exact = {route.exact}
+            component = {route.main}
+          />
+        );
+      });
+    }
+    return result;
+  }
 }
 
 export default App;

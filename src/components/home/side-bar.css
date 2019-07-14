@@ -1,0 +1,11 @@
+.side_bar{
+   text-align: center;
+   height: 100vh;
+   padding: 10px 0px;
+}
+.fa{
+    float: left;
+}
+.task{
+    align-items: center;
+}
