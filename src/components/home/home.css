@@ -1,5 +1,5 @@
 .side-bar{
-    background: red;
+    border-right: 1px solid #0000002e;
 }
 .home{
     height: 100vh;
