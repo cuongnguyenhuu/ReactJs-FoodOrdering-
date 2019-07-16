@@ -21,12 +21,12 @@ class SideBar extends Component {
         <hr/>
         <div className="row task">    
             <i className="fa fa-list col-xl-4" aria-hidden="true"></i>
-            <span className="col-xl-6">  List engineer</span>
+            <span className="col-xl-6">  Engineer list</span>
         </div>
         <hr/>
         <div className="row task">    
             <i className="fa fa-cogs col-xl-4" aria-hidden="true"></i>
-            <span className="col-xl-6">  Set menu</span>
+            <span className="col-xl-6">  Setting menu</span>
         </div>
         <hr/> 
         <div className="row task">    
