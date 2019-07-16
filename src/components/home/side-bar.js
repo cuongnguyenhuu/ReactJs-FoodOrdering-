@@ -14,19 +14,21 @@ class SideBar extends Component {
                     Admin
                 </span>
             </div>
-            <div className="toggle_bar">
-              <i className="fas fa-arrow-circle-left"></i>
-            </div>
+        </div>
+        <hr/>
+        <div className="row task">    
+           <i class="fa fa-chart-line col-xl-4" aria-hidden="true"></i>
+            <span className="col-xl-6">  Home</span>
         </div>
         <hr/>
         <div className="row task">    
             <i className="fa fa-list col-xl-4" aria-hidden="true"></i>
-            <span className="col-xl-6">  Engineer list</span>
+            <span className="col-xl-6">  Set menu</span>
         </div>
-        <hr/>
+        <hr/> 
         <div className="row task">    
             <i className="fa fa-cogs col-xl-4" aria-hidden="true"></i>
-            <span className="col-xl-6">  Setting menu</span>
+            <span className="col-xl-6">  Manage Engineer</span>
         </div>
         <hr/> 
         <div className="row task">    

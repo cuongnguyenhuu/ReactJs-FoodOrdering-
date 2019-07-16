@@ -1,4 +1,34 @@
 .list_engineer{
     position: absolute;
     display: block;
+    width: 100%;
+}
+.search_box, .sort_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.statistic_box{
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold; 
+}
+.statistic_registered{
+    background: rgba(0,123,255,.5);
+}
+.statistic_menu{
+    background: #ffc107;
+}
+.title_statictis{
+    font-family: 'Courier New', Courier, monospace; 
+}
+.fa-check{
+    color: green;
+}
+.fa-times{
+    color: red;
+}
+.pagination_box{
+    justify-content: center;
 }

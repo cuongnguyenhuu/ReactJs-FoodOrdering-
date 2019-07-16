@@ -6,6 +6,7 @@ class Login extends Component {
   render() {
     return(
       <div className = "login">
+        <div className="background_image"></div>
         <form className="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-4 form_login">
           <div className="title_login">
             <span>Lunch ordering</span>
