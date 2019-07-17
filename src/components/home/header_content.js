@@ -6,7 +6,7 @@ class HeaderContent extends Component {
     return(
         <div className="header_content row">
             <div className="col-xl-12 feature_name">
-              <span>Engineer list</span>
+              <span>Home</span>
             </div>
             
             <div className="toggle_bar">
