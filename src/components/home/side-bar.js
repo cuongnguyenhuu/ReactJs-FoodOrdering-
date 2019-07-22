@@ -17,7 +17,7 @@ class SideBar extends Component {
         </div>
         <hr/>
         <div className="row task">    
-           <i class="fa fa-chart-line col-xl-4" aria-hidden="true"></i>
+           <i className="fa fa-chart-line col-xl-4" aria-hidden="true"></i>
             <span className="col-xl-6">  Home</span>
         </div>
         <hr/>

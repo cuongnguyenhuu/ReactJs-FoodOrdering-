@@ -13,25 +13,11 @@
 .breadcrumb{
     margin: 0px;
 }
-.toggle_bar:hover{
-    color: gray !important;
-    /* border: 1px solid; */
-    background: #80808042;
-    border-radius: 50%;
-}
+
 .header_content hr{
     margin: 0px;
 }
-.toggle_bar{
-    position: absolute;
-    left: 10px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #00000054;
-}
+
 .feature_name{
     color: rgb(42, 116, 228);
     font-weight: bold;

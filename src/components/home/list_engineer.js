@@ -12,15 +12,15 @@ class ListEngineer extends Component {
               <div className="input-group mb-3">
                 <input type="text" className="form-control" placeholder="Type to search"/>
                 <div className="input-group-append">
-                  <span className="input-group-text"><i class="fas fa-search"></i></span>
+                  <span className="input-group-text"><i className="fas fa-search"></i></span>
                 </div>
               </div>
               </form>
             </div>
             <div className=" col-xl-3">
-              <div class="form-group">
+              <div className="form-group">
                 {/* <label for="exampleFormControlSelect1">Example select</label> */}
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select className="form-control" id="exampleFormControlSelect1">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -54,7 +54,7 @@ class ListEngineer extends Component {
             </div>
           </div>
           <div className="row">
-            <table class="table table-hover">
+            <table className="table table-hover">
               <thead>
                 <tr>
                   <th>Fullname</th>
@@ -65,29 +65,29 @@ class ListEngineer extends Component {
               <tbody>
                 <tr>
                   <td>John</td>
-                  <td><i class="fas fa-check"></i></td>
+                  <td><i className="fas fa-check"></i></td>
                   <td>john@example.com</td>
                 </tr>
                 <tr>
                   <td>Mary</td>
-                  <td><i class="fas fa-times"></i></td>
+                  <td><i className="fas fa-times"></i></td>
                   <td>mary@example.com</td>
                 </tr>
                 <tr>
                   <td>July</td>
-                  <td><i class="fas fa-check"></i></td>
+                  <td><i className="fas fa-check"></i></td>
                   <td>july@example.com</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div className="row pagination_box">
-            <ul class="pagination pagination-sm">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item active"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <ul className="pagination pagination-sm">
+              <li className="page-item"><a className="page-link" href="#">Previous</a></li>
+              <li className="page-item"><a className="page-link" href="#">1</a></li>
+              <li className="page-item active"><a className="page-link" href="#">2</a></li>
+              <li className="page-item"><a className="page-link" href="#">3</a></li>
+              <li className="page-item"><a className="page-link" href="#">Next</a></li>
             </ul>
           </div>
         </div>
