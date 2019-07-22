@@ -8,17 +8,17 @@ import * as actions from './../../actions/index';
 
 class Home extends Component {
   onToggle = () =>{
-    this.props.onChangeToggle();
+    this.props.onToggleSideBar();
   }
   render() {
-    var stateToggleBar = this.props.tasks.stateToggleBar;
-    console.log(stateToggleBar);
+    var { isShowSideBar } = this.props;
+    console.log("aaa"+isShowSideBar);
     return(
       <div className="row home">
-        <div className={ stateToggleBar===true?'col-xl-4 side-bar':'col-xl-1 side-bar'}>
+        <div className={ isShowSideBar===true?'col-xl-2 side-bar':'col-xl-1 side-bar'}>
           <SideBar></SideBar>
         </div>
-        <div className={ stateToggleBar===true?'col-xl-8 content':'col-xl-11 content'}>
+        <div className={ isShowSideBar===true?'col-xl-10 content':'col-xl-11 content'}>
           <div className="row">
             <div className="toggle_bar" onClick={this.onToggle}>
               <i className="fas fa-arrow-circle-left"></i>
@@ -36,23 +36,15 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) =>{
-  // console.log(state); 
   return { 
-    tasks : state.tasks
+    isShowSideBar : state.tasks
   }
 };
 
-
-// const mapStateToprops = (state) =>{
-//   return{
-    
-//   }
-// };
-
 const mapDispatchToProps = (dispatch,props) =>{
   return {
-    onChangeToggle : () =>{
-      dispatch(actions.changeToggle());
+    onToggleSideBar : () =>{
+      dispatch(actions.toggleBar());
     }
   }
 }

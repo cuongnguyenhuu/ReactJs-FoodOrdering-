@@ -4,9 +4,3 @@ export const toggleBar = () => {
         type : types.TOGGLE_BAR
     }
 };
-
-export const changeToggle = () =>{
-    return{
-        type :types.CHANGE_TOGGLE
-    }
-}

@@ -24,4 +24,5 @@
     justify-content: center;
     align-items: center;
     color: #00000054;
+    z-index: 9999;
 }
