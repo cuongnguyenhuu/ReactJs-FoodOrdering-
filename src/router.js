@@ -3,16 +3,11 @@ import Login from './components/login/login';
 import Home from './components/home/home';
 import NotFound from './components/not-found';
 
-const routes =[
+export const privateRoutes =[
     {
         path : '/',
         exact : true,
         main : () => <Home />
-    },
-    {
-        path : '/login',
-        exact : false,
-        main : () => <Login />
     },
     {
         path : '',
@@ -21,4 +16,10 @@ const routes =[
     }
 ];
 
-export default routes;
+export const publicRoutes = [
+    {
+        path : '/login',
+        exact : false,
+        main : () => <Login />
+    }
+]

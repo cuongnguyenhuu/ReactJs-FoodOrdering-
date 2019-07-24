@@ -1,0 +1,1 @@
+export const API_URL = "https://lunch-ordering-api.herokuapp.com/api";

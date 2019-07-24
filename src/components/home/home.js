@@ -21,7 +21,7 @@ class Home extends Component {
         <div className={ isShowSideBar===true?'col-xl-10 content':'col-xl-11 content'}>
           <div className="row">
             <div className="toggle_bar" onClick={this.onToggle}>
-              <i className="fas fa-arrow-circle-left"></i>
+              { isShowSideBar==true?<i className="fas fa-arrow-circle-left"></i>:<i className="fas fa-arrow-circle-right"></i>}
             </div>
             <HeaderContent></HeaderContent>
           </div>
