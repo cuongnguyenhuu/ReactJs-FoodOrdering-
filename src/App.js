@@ -3,7 +3,9 @@ import './App.css';
 import { privateRoutes, publicRoutes } from './router';
 import { PrivateRoute } from './constants/privateRoute';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
+import Login from './components/login/login';
+import Home from './components/home/home';
+import NotFound from './components/not-found';
 
 class App extends Component {
   render() {
@@ -11,8 +13,12 @@ class App extends Component {
       <Router>
         <div className="App">
           <Switch>
-            {/* { this.showPrivateContents(privateRoutes)} */}
-            { this.showPublicContents(publicRoutes)}
+            <Route path="/login" component={Login}></Route>
+
+            <PrivateRoute path="/" exact component={Home}></PrivateRoute>
+            <Route path="" component={NotFound}></Route>
+            {/* { this.showPrivateContents(privateRoutes)}
+            { this.showPublicContents(publicRoutes)} */}
           </Switch>
         </div>
       </Router>

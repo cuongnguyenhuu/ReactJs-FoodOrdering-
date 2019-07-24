@@ -1,5 +1,6 @@
 import * as types from './../constants/ActionTypes';
 import callAPI from './../utils/apiCaller';
+import {Redirect} from 'react-router-dom';
 export const toggleBar = () => {
     return {
         type : types.TOGGLE_BAR
@@ -9,11 +10,12 @@ export const toggleBar = () => {
 export const actLoginRequest = (account) =>{
     return dispatch =>{
         return callAPI('Users/auth','POST',account).then(res => {
-            // console.log(res.status);
+            console.log(res.status);
             dispatch(actLogin(res.data));
             localStorage.setItem("accessToken",res.data);
+            window.location.href="/";
         }).catch(err=>{
-            console.log(err.response.data.message);
+            // console.log(err.response.data.message);
             // return confirm(err.response.data);
         });
     }

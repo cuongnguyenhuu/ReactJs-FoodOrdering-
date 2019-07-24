@@ -35,12 +35,12 @@ class Login extends Component {
   }
   
   render() {
-    var accessToken = this.props.accessToken;  
-    // console.log(accessToken);
-    if(accessToken!='')
-    {
-      return <Redirect to="/"/>
-    }
+    // var accessToken = this.props.accessToken;  
+    // // console.log(accessToken);
+    // if(accessToken!='')
+    // {
+    //   return <Redirect to="/"/>
+    // }
     var { Username, Password } = this.state;
     return(
       
@@ -85,11 +85,11 @@ class Login extends Component {
     );
   }
 }
-const mapStateToProps = state =>{
-  return{
-    accessToken : state.authentications
-  }
-}
+// const mapStateToProps = state =>{
+//   return{
+//     accessToken : state.authentications
+//   }
+// }
 
 const mapDispatchToProps = (dispatch, props) =>{
   return {
@@ -98,4 +98,4 @@ const mapDispatchToProps = (dispatch, props) =>{
     }
   };
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Login);
+export default connect(null,mapDispatchToProps)(Login);
