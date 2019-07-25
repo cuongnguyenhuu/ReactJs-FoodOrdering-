@@ -1,9 +1,33 @@
 import React, {Component} from 'react';
 import './list_engineer.css';
 import CircleChart from './circle_chart'
+import {connect} from 'react-redux';
+import * as actions from './../../actions/index';
 
 class ListEngineer extends Component {
+  componentDidMount(){
+    this.props.onGetAllUser();
+  }
+  showAllUSer(allUSer){
+    var result = null;
+    if(allUSer.length>0){
+      result = allUSer.map((user, index)=>{
+        console.log(user.Name);
+        return (
+          <tr key={index}>
+                  <td>{user.Username}</td>
+                  <td>{user.Name}</td>
+                  <td><i className="fas fa-check"></i></td>
+                  <td>{user.Phone}</td>
+          </tr>
+        );
+      });
+    }
+    return result;
+  }
   render() {
+    var {allUSer} = this.props;
+    console.log(allUSer);
     return(
         <div className="list_engineer">
           <div className="row fitter">
@@ -57,27 +81,14 @@ class ListEngineer extends Component {
             <table className="table table-hover">
               <thead>
                 <tr>
-                  <th>Fullname</th>
+                  <th>Username</th>
+                  <th>Name</th>
                   <th>Status</th>
                   <th>Skype</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>John</td>
-                  <td><i className="fas fa-check"></i></td>
-                  <td>john@example.com</td>
-                </tr>
-                <tr>
-                  <td>Mary</td>
-                  <td><i className="fas fa-times"></i></td>
-                  <td>mary@example.com</td>
-                </tr>
-                <tr>
-                  <td>July</td>
-                  <td><i className="fas fa-check"></i></td>
-                  <td>july@example.com</td>
-                </tr>
+                {this.showAllUSer(allUSer)}
               </tbody>
             </table>
           </div>
@@ -94,5 +105,16 @@ class ListEngineer extends Component {
     );
   }
 } 
-
-export default ListEngineer;
+const mapStateToProps = (state) =>{
+  return { 
+    allUSer : state.user
+  }
+}
+const mapDispatchToProps = (dispatch,props) =>{
+  return {
+    onGetAllUser : () =>{
+      dispatch(actions.actGetUserRequest());
+    }
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(ListEngineer);

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import SideBar from './side-bar';
 import ListEngineer from './list_engineer';
+import ListMenu from './listMenu';
 import HeaderContent from './header_content';
 import './home.css';
 import { connect } from 'react-redux';
@@ -26,9 +27,12 @@ class Home extends Component {
             <HeaderContent></HeaderContent>
           </div>
           <hr/> 
-          <div className="row">
+          {/* <div className="row">
             <ListEngineer></ListEngineer>
-          </div>  
+          </div>   */}
+          <div className="row">
+            <ListMenu></ListMenu>
+          </div>
         </div>
       </div>
     );

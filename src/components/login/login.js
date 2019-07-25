@@ -33,17 +33,15 @@ class Login extends Component {
     // console.log(Username+"/"+Password);
     
   }
-  
   render() {
     // var accessToken = this.props.accessToken;  
-    // // console.log(accessToken);
-    // if(accessToken!='')
+    // console.log("TK"+accessToken);
+    // if(accessToken!=='')
     // {
     //   return <Redirect to="/"/>
     // }
     var { Username, Password } = this.state;
     return(
-      
       <div className = "login">
         <div className="background_image"></div>
         <form onSubmit={this.onSubmit} className="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-4 form_login">
@@ -85,11 +83,11 @@ class Login extends Component {
     );
   }
 }
-// const mapStateToProps = state =>{
-//   return{
-//     accessToken : state.authentications
-//   }
-// }
+const mapStateToProps = state =>{
+  return{
+    accessToken : state.authentications
+  }
+}
 
 const mapDispatchToProps = (dispatch, props) =>{
   return {
@@ -98,4 +96,4 @@ const mapDispatchToProps = (dispatch, props) =>{
     }
   };
 }
-export default connect(null,mapDispatchToProps)(Login);
+export default connect(mapStateToProps,mapDispatchToProps)(Login);

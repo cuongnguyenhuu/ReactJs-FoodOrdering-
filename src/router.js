@@ -22,4 +22,4 @@ export const publicRoutes = [
         exact : false,
         main : () => <Login />
     }
-]
+];
