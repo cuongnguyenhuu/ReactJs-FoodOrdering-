@@ -4,13 +4,23 @@ import '../../images/background.jpg'
 import { actLoginRequest } from './../../actions/index';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
+import { css } from '@emotion/core';
+// First way to import
+import { ClipLoader } from 'react-spinners';
 
+const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+`;
 class Login extends Component {
   constructor(props){
     super(props);
+    localStorage.removeItem("accessToken");
     this.state = {
       Username: '',
       Password: '',
+      loading: true
     };
   }
   onChange = (e) =>{
@@ -28,8 +38,9 @@ class Login extends Component {
       Username,
       Password
     };
-
+    
     this.props.onLogin(account);
+
     // console.log(Username+"/"+Password);
     
   }
@@ -43,6 +54,7 @@ class Login extends Component {
     var { Username, Password } = this.state;
     return(
       <div className = "login">
+        
         <div className="background_image"></div>
         <form onSubmit={this.onSubmit} className="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-4 form_login">
           <div className="title_login">
@@ -79,6 +91,15 @@ class Login extends Component {
             <a href="#">Forgot password?</a>
           </div>
         </form>
+        <div className='sweet-loading'>
+        <ClipLoader
+          css={override}
+          sizeUnit={"px"}
+          size={150}
+          color={'#123abc'}
+          loading={this.state.loading}
+        />
+      </div> 
       </div>
     );
   }

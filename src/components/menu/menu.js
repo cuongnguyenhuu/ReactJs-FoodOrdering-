@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import SideBar from '../utils/side-bar';
-import ListEngineer from './list_engineer';
-// import ListMenu from './listMenu';
+// import ListEngineer from './list_engineer';
+import ListMenu from './listMenu';
 import HeaderContent from '../utils/header_content';
-import './home.css';
+import '../home/home.css';
 import { connect } from 'react-redux';
 import * as actions from './../../actions/index';
 
-class Home extends Component {
+class Menu extends Component {
   onToggle = () =>{
     this.props.onToggleSideBar();
   }
@@ -24,15 +24,15 @@ class Home extends Component {
             <div className="toggle_bar" onClick={this.onToggle}>
               { isShowSideBar==true?<i className="fas fa-arrow-circle-left"></i>:<i className="fas fa-arrow-circle-right"></i>}
             </div>
-            <HeaderContent title="Home"></HeaderContent>
+            <HeaderContent title="Menu"></HeaderContent>
           </div>
           <hr/> 
-          <div className="row">
-            <ListEngineer></ListEngineer>
-          </div>  
           {/* <div className="row">
+            <ListEngineer></ListEngineer>
+          </div>   */}
+          <div className="row">
             <ListMenu></ListMenu>
-          </div> */}
+          </div>
         </div>
       </div>
     );
@@ -52,4 +52,4 @@ const mapDispatchToProps = (dispatch,props) =>{
     }
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Menu);

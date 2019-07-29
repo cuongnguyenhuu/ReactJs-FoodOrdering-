@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import avatar from '../../images/background.jpg'
 import './side-bar.css';
 import { connect } from 'react-redux';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class SideBar extends Component {
   render() {
     var isShowSideBar = this.props.isShowSideBar;
@@ -19,25 +20,25 @@ class SideBar extends Component {
             </div>:''}
         </div>
         <hr/>
-        <div className="row task">    
+        <Link to="/" className="row task">    
            <i className="fa fa-chart-line col-xl-4" aria-hidden="true"></i>
             {isShowSideBar===true?<span className="col-xl-6">  Home</span>:''}
-        </div>
+        </Link>
         <hr/>
-        <div className="row task">    
+        <Link to="/menu" className="row task">    
             <i className="fa fa-list col-xl-4" aria-hidden="true"></i>
             {isShowSideBar===true?<span className="col-xl-6">  Set menu</span>:''}        
-        </div>
+        </Link>
         <hr/> 
         <div className="row task">    
             <i className="fa fa-cogs col-xl-4" aria-hidden="true"></i>
             {isShowSideBar===true?<span className="col-xl-6">  Manage Engineer</span>:''}
         </div>
         <hr/> 
-        <div className="row task">    
+        <Link to="/login" className="row task">    
             <i className="fa fa-sign-out-alt col-xl-4" aria-hidden="true"></i>
             {isShowSideBar===true?<span className="col-xl-6">  Logout</span>:''}
-        </div>
+        </Link>
         <hr/>
       </div>
     );

@@ -6,10 +6,11 @@ import './header_content.css';
 class HeaderContent extends Component {
   
   render() {
+    var title = this.props.title;
     return(
         <div className="header_content row">
             <div className="col-xl-12 feature_name">
-              <span>Home</span>
+              <span>{title}</span>
             </div>
             
             
