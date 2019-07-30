@@ -91,7 +91,7 @@ class Login extends Component {
             <a href="#">Forgot password?</a>
           </div>
         </form>
-        <div className='sweet-loading'>
+        {/* <div className='sweet-loading'>
         <ClipLoader
           css={override}
           sizeUnit={"px"}
@@ -99,7 +99,7 @@ class Login extends Component {
           color={'#123abc'}
           loading={this.state.loading}
         />
-      </div> 
+      </div>  */}
       </div>
     );
   }

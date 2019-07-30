@@ -41,7 +41,7 @@ export const actGetUserRequest = () =>{
             // window.location.href="/";
             // <Redirect to="/"></Redirect>
         }).catch(err=>{
-            console.log(err.response.data.message);
+            console.log(err);
             // return confirm(err.response.data);
         });
     }
