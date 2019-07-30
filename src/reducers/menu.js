@@ -6,7 +6,7 @@ const menu = (state = initialState, action) =>{
     switch(action.type) {
         case types.GET_ALL_MENU:
             // console.log(action.accessToken);
-            state = action.allMenu;
+            state= action.allMenu;
             return [...state];
         default: return [...state];
     }

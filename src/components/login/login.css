@@ -41,3 +41,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.spinner-border{
+    position: absolute;
+}

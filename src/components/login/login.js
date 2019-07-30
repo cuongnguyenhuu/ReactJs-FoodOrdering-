@@ -13,6 +13,7 @@ const override = css`
     margin: 0 auto;
     border-color: red;
 `;
+// var load = false;
 class Login extends Component {
   constructor(props){
     super(props);
@@ -20,7 +21,7 @@ class Login extends Component {
     this.state = {
       Username: '',
       Password: '',
-      loading: true
+      loading: false
     };
   }
   onChange = (e) =>{
@@ -32,6 +33,11 @@ class Login extends Component {
     });
   }
   onSubmit = (e) =>{
+    // console.log("a");
+    // load = true;
+    this.setState({
+      loading:true
+    });
     e.preventDefault();
     var {Username, Password} = this.state;
     var account = {
@@ -51,7 +57,7 @@ class Login extends Component {
     // {
     //   return <Redirect to="/"/>
     // }
-    var { Username, Password } = this.state;
+    var { Username, Password, loading } = this.state;
     return(
       <div className = "login">
         
@@ -100,6 +106,7 @@ class Login extends Component {
           loading={this.state.loading}
         />
       </div>  */}
+      {loading===true?<div class="spinner-border text-info"></div>:''}
       </div>
     );
   }

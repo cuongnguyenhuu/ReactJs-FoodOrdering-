@@ -15,10 +15,9 @@ class ListMenu extends Component {
         console.log(menu.Name);
         return (
           <tr key={index}>
-                  <td>{menu.Username}</td>
                   <td>{menu.Name}</td>
-                  <td><i className="fas fa-check"></i></td>
-                  <td>{menu.Phone}</td>
+                  <td>{menu.DishIds.length}</td>
+                  <td><button type="button" class="btn btn-info">Detail</button></td>
           </tr>
         );
       });
@@ -34,10 +33,9 @@ class ListMenu extends Component {
             <table className="table table-hover">
               <thead>
                 <tr>
-                  <th>Username</th>
                   <th>Name</th>
-                  <th>Status</th>
-                  <th>Skype</th>
+                  <th>Total dishes</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>

@@ -17,7 +17,7 @@ class ListEngineer extends Component {
           <tr key={index}>
                   <td>{user.Username}</td>
                   <td>{user.Name}</td>
-                  <td><i className="fas fa-check"></i></td>
+                  <td>{user.IsOrdered===true?<i className="fas fa-check"></i>:<i class="fas fa-times"></i>}</td>
                   <td>{user.Phone}</td>
           </tr>
         );
@@ -83,8 +83,8 @@ class ListEngineer extends Component {
                 <tr>
                   <th>Username</th>
                   <th>Name</th>
-                  <th>Status</th>
-                  <th>Skype</th>
+                  <th>Is ordered</th>
+                  <th>Phone number</th>
                 </tr>
               </thead>
               <tbody>
