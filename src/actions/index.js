@@ -80,7 +80,7 @@ export const actGetMenuToDayRequest = () =>{
             console.log(res.data);
             dispatch(actGetMenuToday(res.data));
         }).catch(err=>{
-            console.log(err);
+            console.log(err.response.data);
         });
     }
 } 
